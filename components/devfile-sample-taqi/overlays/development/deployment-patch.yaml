@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-taqi
+  namespace: user1-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/stonesoupuicluster/user1-tenant/my-app/devfile-sample-taqi@sha256:1d69cf2f1ab0f8bad21e3cfa1144be0301695d9f4f4e8019211d8b930d8a2576
+        name: my-nodejs
+        resources: {}
+status: {}
